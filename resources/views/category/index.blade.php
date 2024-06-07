@@ -22,14 +22,14 @@
             <div class="card h-100 rounded mx-1" style="width: 100%;">
                 <div class="card-header">
                     <a href="{{ route('category.categoryitemlist', $category->id) }}">
-                    
+
                         <h3 class="flex-grow-1 fw-bolder ms-2 mt-1">{{ $category->name }}</h3>
                     </a>
                     <img src="{{$category->image}}"
                             alt="Category Image"
                             class="card-img-top mb-1 rounded" style="height: 180px; object-fit: cover;">
                 </div>
-                        
+
 
 
                 <div class="card-body d-flex flex-column">

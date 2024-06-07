@@ -41,7 +41,7 @@ class ItemViewController extends Controller
         $orderedItems = Cart::find($user->cart->id)->items;
         // dd($user->cart);
         // dd($orderedItems->items);
-        return view('item-view', ['cart' => $cart, 'items' => $items, 'orderedItems' => $orderedItems,]);
+        return view('item.item-view', ['cart' => $cart, 'items' => $items, 'orderedItems' => $orderedItems,]);
     }
 
 

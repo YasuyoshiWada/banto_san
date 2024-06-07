@@ -33,8 +33,7 @@ class AddColumnsToUsersTable extends Migration
             $table->integer('employee_number')->nullable();
             $table->enum('gender', ['male', 'female'])->nullable();
             $table->string('address')->nullable();
-            $table->timestamp('birthdate')->nullable();
-
+            $table->timestamp('BirthDate')->nullable();
 
     });
 
@@ -52,11 +51,11 @@ class AddColumnsToUsersTable extends Migration
                 'image',
                 'employee_number',
                 'gender',
-                'birthdate',
+                'BirthDate',
                 'role_id',
                 'role_name',
                 'branch_id',
-                'branch_neme',
+                'branch_name',
 
             ]);
 

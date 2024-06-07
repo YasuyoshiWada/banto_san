@@ -2,15 +2,17 @@
 
 @section('title', 'Item Category')
 
+@include('category.modal.create_category')
+
 @section('styles')
 
-<style> 
+<style>
     body {
         margin: 0;
         padding: 0;
         /* background-color: #99ccff; */
     }
-    
+
     .btn-color-sort {
         background-color: #FFFFFF;
     }
@@ -30,7 +32,12 @@
         </div>
     </div>
     <div class="row mt-3">
-        <div class="col-12 text-end">
+        <div class="col-2">
+            <a class="btn btn-link" data-bs-toggle="modal" data-bs-target="#category-create">
+                CREATE_CATEGORY
+            </a>
+        </div>
+        <div class="col-10 text-end">
             <a href="#"><button type="button" class="btn btn-danger">CLOSE</button></a> {{--Return TOP VIEW--}}
         </div>
     </div>
@@ -38,14 +45,14 @@
         {{-- Display Categories --}}
         @forelse($all_categories as $category)
         <div class="col-md-3 mt-3 mb-2">
-            {{-- Data from categories table. click photo go to category detail page --}}            
+            {{-- Data from categories table. click photo go to category detail page --}}
             <div class="card h-100 rounded mx-1" style="width: 100%;">
-                <a href="{{ route('category.categoryitemlist', $category->id) }}">                    
+                <a href="{{ route('category.categoryitemlist', $category->id) }}">
                     <h3 class="flex-grow-1 fw-bolder ms-2 mt-1">{{ $category->name }}</h3>
                 </a>
                 <img src="{{$category->image}}"
                         alt="Category Image"
-                        class="card-img-top mb-1 rounded" style="height: 180px; object-fit: cover;">                
+                        class="card-img-top mb-1 rounded" style="height: 180px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             {{-- Category name from categories table --}}
                             <div class="text-dark fw-bold">Total Amount: $ {{ $category->item->sum('price') }}</div>

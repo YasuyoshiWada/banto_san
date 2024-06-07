@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="container mt-5 item-container">
       <div class="row row-cols-5">
           @foreach($all_items as $item)
@@ -53,7 +53,7 @@
                           <p class="card-text text-center fs-4 fw-bold title">{{ $item->name }}</p>
                           <div class="row">
                             <div class="col-6 pe-0 fw-bold">Stock : <span class="fw-normal">{{ $item->inventory }}</span></div>
-                            <div class="col-6 text-end ps-0 fs-5">{{ $item->price }}</div>
+                            <div class="col-6 text-end ps-0 fs-5">￥{{ $item->price }}</div>
                             <div class="col-12 fw-bold category">Category : <span class="fw-normal">{{ $item->category_id}}</span></div>
                             <div class="text-dark flex-grow-1">Detail: {{ $item->detail }}</div>
                           </div>
@@ -61,7 +61,7 @@
                   </div>
               </div>
           @endforeach
-          
+
       </div>
     </div>
   </div>

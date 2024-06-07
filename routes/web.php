@@ -38,11 +38,17 @@ Route::get('/userlist', function () {
     return view('userlist');
 });
 
-Route::get('/editProfile', function () 
+Route::get('/editProfile', function ()
 
 {
     return view('editProfile');
 });
+Route::get('/item.item', function ()
+
+{
+    return view('item.item');
+});
+
 // admin login
 
 Route::get('userlist', [UserlistController::class, 'index']);
@@ -127,4 +133,3 @@ Route::post('/item-view-send-order', [ItemViewController::class, 'sendOrder'])->
 Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
 //InventoryController
 Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
-

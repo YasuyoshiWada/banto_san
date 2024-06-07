@@ -26,11 +26,7 @@
             <div class="card" style="max-width: 360px; height: 160px">
                 <div class="row">
                     <div class="col-md-4">
-<<<<<<< HEAD
-                        <img src="{{ url('/storage/images/transaction.png') }}" class="mt-3 img-fluid rounded-start"
-=======
                         <img src="{{ url('/images/transaction.png') }}" class="mt-3 img-fluid rounded-start"
->>>>>>> c779153d12a0d4254989d1756f82b6b691f52939
                             alt="transaction">
                     </div>
                     <div class="col-md-8">
@@ -105,11 +101,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-
-=======
 ​
->>>>>>> c779153d12a0d4254989d1756f82b6b691f52939
         <div class="container mt-5">
             <div class="row justify-content-between">
                 <div class="col-3">
@@ -167,11 +159,7 @@
                 </tbody>
             </table>
             {{ $users->links() }}
-            
+
         </div>
     </div>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> c779153d12a0d4254989d1756f82b6b691f52939

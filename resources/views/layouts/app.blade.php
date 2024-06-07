@@ -57,5 +57,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
 
     @yield('script')
+    <script src="{{ asset('/js/item-view.js') }}"></script>
 </body>
 </html>

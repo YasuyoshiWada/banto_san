@@ -7,4 +7,29 @@
   -moz-user-select: none;
   user-select: none;
 }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #383838;
+  padding: 10px 40px;
+  border-radius: 6px;
+}
+ul{
+  margin: 20px 30px;
+}
+ul li{
+  display: inline-block;
+  margin: 0 10px;
+  background: #ccc;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=userlist.css.map */
