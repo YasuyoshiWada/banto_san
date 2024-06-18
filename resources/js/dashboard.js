@@ -7,12 +7,12 @@ var myLine2Chart = new Chart(ctx, {
     //データの設定
     data: {
         //データ項目のラベル
-        labels: ["1月", "2月", "3月", "4月", "5月", "6月"],
+        labels: ["1月", "2月", "3月", "4月", "5月", "6月","7月"],
         //データセット
         datasets: [
             {
                 //凡例
-                label: "1年目",
+                label: "first year",
                 //面の表示
                 fill: false,
                 //線のカーブ
@@ -116,5 +116,3 @@ window.onload = function() {
         options: complexChartOption
     });
 };
-
-

@@ -1,0 +1,10 @@
+.body {
+  font-style: Poppins;
+  -webkit-text-decoration-color: black !important;
+          text-decoration-color: black !important;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/*# sourceMappingURL=userlist.css.map */

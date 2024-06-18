@@ -1,6 +1,5 @@
 /* edit.blade.php */
 .body{
-    background-color: rgb(153,204,255);
     font-family: poppins;
 }
 
@@ -34,6 +33,7 @@
     text-decoration: none;
     font-size: 16px;
 }
+
 select{
     background-color:transparent; 
     border-color:black; 
@@ -78,7 +78,6 @@ th ,td{
 
     /* everything same css */
     .card-body{
-        background-image: url('../images/carrot.jpg');
         background-size: cover;
         height: 250px;
         border-radius: 20px 20px 0px 0px;
@@ -89,9 +88,9 @@ th ,td{
         border-radius: 20px 20px 20px 20px;
     }
 
-    .card-text{
+    /* .card-text{
         background-color: rgb(153,204,255);
-    }
+    } */
 
     /* modal (delete and save) same css */
     .card-modal{

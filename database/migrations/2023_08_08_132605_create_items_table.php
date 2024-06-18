@@ -20,14 +20,15 @@ class CreateItemsTable extends Migration
             $table->double('price');
             $table->string('detail');
             $table->integer('inventory');
-            $table->string('image');
+            $table->longText('image');
             $table->enum('status', ['active', 'inactive']);
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            
+
+
         });
     }
 

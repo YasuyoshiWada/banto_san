@@ -1,0 +1,45 @@
+.body{
+    font-style: Poppins;
+    text-decoration-color: black !important;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+​
+​
+// pagination start
+// .pagination{
+//     border-radius: 4px;
+// }
+// .page-link{
+//     text-decoration: none;
+//     color: black;
+//     background-color: #f2f3f5;
+//     }
+​
+// .pagination .page-link:hover {
+//         color: white;
+//         background-color:#003366!important;
+//     }
+    
+​
+// .pagenation{
+//     width: 100%;
+//     height: 100vh;
+//     background: linear-gradient(45deg,#410358,#4700bc);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// pagination
+​
+.pagination{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #383838;
+    padding: 10px 40px ;
+    border-radius: 6px;
+}

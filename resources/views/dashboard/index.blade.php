@@ -27,9 +27,6 @@
                     <div class="form-group">
                         <select class="form-control text-center fw-bold" id="FormSelect2">
                             <option value="" selected>All</option>
-                            @foreach($branches as $branch):
-                                <option value="{{ $branch->id }}">{{ $branch->branch_name }}</option>
-                            @endforeach;
                         </select>
                     </div>
                 </div>
@@ -112,6 +109,7 @@
         $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
             var startDate = picker.startDate.format('YYYY-MM-DD');
             var endDate = picker.endDate.format('YYYY-MM-DD');
+            var branch_id = $('#FormSelect2').find(":selected").val();
 
             // サーバーに日付の範囲を送信するためのAjaxリクエストを行うことができます
             $.ajax({
@@ -120,13 +118,16 @@
                 method: 'POST',
                 data: {
                     start_date: startDate,
-                    end_date: endDate
+                    end_date: endDate,
+                    branch_id: branch_id
                 },
                 success: function(response) {
                     // サーバーからの応答を処理し、合計価格を表示するためのコードを追加
                     $('#total-price').text(response.total_price);
                     $('#total-orders').text(response.total_orders);
                     $('#average-unit').text(response.average_unit);
+
+                    // Call function to dashboard.js and send data
                 }
             });
         });
