@@ -1,31 +1,32 @@
 @extends('layouts.app')
-
-@section('title','Edit Items')
-    
+@section('title','ADD Items')
 @section('content')
+<link rel="stylesheet" href="{{ asset('/css/item-add.css')  }}" >
 
-    <link rel="stylesheet" href="/css/item.css">
 
-    <div class="body">
-        
     <div class="container">
         <div class="row justify-content-center">
 
             {{-- to edit item details --}}
-            {{-- <form action="#" method="post" enctype="multipart/form-data" id="form1">
+            <form action="#" method="post" enctype="multipart/form-data" id="form1">
                 @csrf
                 @method('PATCH')
 
-            </form> --}}
+            </form>
 
-                <h1 class="text-center">EDIT ITEMS</h1>
+            <form action="#" method="post" id="form2">
+                @csrf
+                @method('DELETE')
+            </form>
+
+                <h1 class="text-center">ADD ITEMS</h1>
 
 
                 <div class="row">
                     {{-- Item card --}}
                     <div class="col-4">
                         <div class="row">
-                            <div class="col-10 offset-1 align-items-center">
+                            <div class="col-10 align-items-center">
                                 <div class="card card-potision">
                                     <div class="card-body">
                                         <div class="upload-box">
@@ -33,14 +34,19 @@
                                             <span>+</span>
                                         </div>
                                     </div>
-                                    <div class="card-footer" >
-                                        <div class="card-text">
+                                    <div class="card-footer" style="background-color: rgb(216,230,233)">
+                                        <div class="border border-rounded" style="background-color: rgb(153,204,255)">
                                             <p class="h2 text-center">ITEM NAME</p>
                                             <p class="h4 text-center">Chicken</p>
                                             <p class="h5 px-1">PRICE :</p>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <p class="text-margin">DRAG-AND-DROP TO CHANGE IMAGES</p>
                             </div>
                         </div>
                     </div>
@@ -89,7 +95,7 @@
 
         
                                 <div class="row mt-5 delete-button">
-                                    <button data-bs-toggle="modal" data-bs-target="#delete-item" class="delete-button btn btn-lg">Delete</button>
+                                    <button data-bs-toggle="modal" data-bs-target="#delete-item" class="delete-button btn btn-lg" form="form2">Delete</button>
                                 </div>
                             </div>
                             <div class="col-3"></div>
@@ -170,12 +176,36 @@
             </nav>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-6">
+            <button data-bs-toggle="modal" data-bs-target="#delete-item" class="delete-button btn btn-lg">Delete</button>
+        </div>
+        <div class="col-6">
+            <button data-bs-toggle="modal" data-bs-target="#save-item" class="delete-button btn btn-lg">save</button>
+        </div>
     </div>
-    
-    @include('item.modal.delete')
-    @include('item.modal.save')
 
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

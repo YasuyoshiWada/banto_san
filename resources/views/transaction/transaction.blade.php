@@ -65,7 +65,7 @@
                 // results を使って結果を表示する処理を追加する
               });
             });
-        </script>
+          </script>
 
 
         <div class="col-auto">
@@ -134,7 +134,7 @@
                                 </button>
                             </div>
 
-                            {{-- <div id="test-modal" class="modal fade" tabindex="-1" aria-hidden="true"> --}}
+                            <div id="test-modal" class="modal fade" tabindex="-1" aria-hidden="true">
 
                             <div id="test-modal-{{ $transaction->id }}" class="modal fade" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -145,6 +145,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <table class="table table-bordered table-striped">
+
                                                 <thead>
                                                     <tr>
                                                         <th scope="col-3"></th>
@@ -162,7 +163,16 @@
                                                         <td>{{ $item->price }}</td>
                                                         <td>{{ $item->quantity }}</td>
                                                     </tr>
-                                                @endforeach
+
+                                                    <!-- item2 -->
+                                                    <tr>
+                                                        <td><img src="{{ asset('images/sarada.jpg') }}" alt="sarada" width="50"></td>
+                                                        <td>sarada</td>
+                                                        <td>200</td>
+                                                        <td>2</td>
+                                                    </tr>
+
+                                                    <!-- other items -->
 
                                                 </tbody>
                                             </table>
@@ -182,50 +192,55 @@
         </table>
     </div>
 
-<div class="row mt-5">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <a class="page-link" href="{{ $transactions->previousPageUrl() }}" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            @for ($page = 1; $page <= $transactions->lastPage(); $page++)
-                <li class="page-item {{ $page == $transactions->currentPage() ? 'active' : '' }}">
-                    <a class="page-link" href="{{ $transactions->url($page) }}">{{ $page }}</a>
+    <div class="row mt-5">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="{{ $transactions->previousPageUrl() }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
                 </li>
-            @endfor
-            <li class="page-item">
-                <a class="page-link" href="{{ $transactions->nextPageUrl() }}" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<script>
-    $(document).ready(function () {
-        // ページネーション要素を取得
-        var pagination = $('#pagination');
-        // ページネーションリンクがクリックされたときの処理
-        pagination.on('click', 'li.page-item a.page-link', function (e) {
-            e.preventDefault(); // リンクのデフォルト動作を無効化
-            var targetPage = $(this).text(); // クリックされたページ番号を取得
-            // Previousボタンがクリックされた場合
-            if ($(this).attr('aria-label') === 'Previous') {
-                // 前のページに移動する処理をここに記述
-            }
-            // Nextボタンがクリックされた場合
-            else if ($(this).attr('aria-label') === 'Next') {
-                // 次のページに移動する処理をここに記述
-            }
-            // ページ番号がクリックされた場合
-            /* else {
-                // クリックされたページに移動する処理をここに記述
-                // targetPageにクリックされたページ番号が格納されています
-                // 例: クリックされたページが3なら、アイテムの表示を10件から20件までに更新するなど
-            } */
+                @for ($page = 1; $page <= $transactions->lastPage(); $page++)
+                    <li class="page-item {{ $page == $transactions->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $transactions->url($page) }}">{{ $page }}</a>
+                    </li>
+                @endfor
+                <li class="page-item">
+                    <a class="page-link" href="{{ $transactions->nextPageUrl() }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // ページネーション要素を取得
+            var pagination = $('#pagination');
+
+            // ページネーションリンクがクリックされたときの処理
+            pagination.on('click', 'li.page-item a.page-link', function (e) {
+                e.preventDefault(); // リンクのデフォルト動作を無効化
+
+                var targetPage = $(this).text(); // クリックされたページ番号を取得
+
+                // Previousボタンがクリックされた場合
+                if ($(this).attr('aria-label') === 'Previous') {
+                    // 前のページに移動する処理をここに記述
+                }
+                // Nextボタンがクリックされた場合
+                else if ($(this).attr('aria-label') === 'Next') {
+                    // 次のページに移動する処理をここに記述
+                }
+                // ページ番号がクリックされた場合
+                else {
+                    // クリックされたページに移動する処理をここに記述
+                    // targetPageにクリックされたページ番号が格納されています
+                    // 例: クリックされたページが3なら、アイテムの表示を10件から20件までに更新するなど
+                }
+            });
         });
-    });
-</script> 
+    </script>
+
 @endsection

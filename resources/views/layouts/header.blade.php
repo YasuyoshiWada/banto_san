@@ -12,16 +12,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('item.index') }}"><i class="fi fi-sr-home" style="margin-right: 5px;"></i>HOME</a>
+                <a class="nav-link" href="{{ route('items.index') }}"><i class="fi fi-sr-home" style="margin-right: 5px;"></i>HOME</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('item-view.index') }}"><i class="fi fi-sr-layout-fluid" style="margin-right: 5px;"></i>Item List</a>
               </li>
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ route('item.edit.index')}}"><i class="fi fi-sr-edit" style="margin-right: 5px;"></i>Edite item</a>
-              </li> --}}
               <li class="nav-item">
-                <a class="nav-link" href="{{route('category.index')}}"><i class="fi fi-sr-home" style="margin-right: 5px;"></i>Categories</a>
+                <a class="nav-link" href="{{ route('item-view.index') }}"><i class="fi fi-sr-layout-fluid" style="margin-right: 5px;"></i>Item Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('item.edit.index')}}"><i class="fi fi-sr-edit" style="margin-right: 5px;"></i>Edite item</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('category.itemcategories')}}"><i class="fi fi-sr-home" style="margin-right: 5px;"></i>Categories</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard.index') }}"><i class="fi fi-sr-chart-histogram" style="margin-right: 5px;"></i>Dashboard</a>

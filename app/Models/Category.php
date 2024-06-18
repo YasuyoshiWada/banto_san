@@ -2,23 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Item;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
     use HasFactory;
-    
+    protected $table = 'categories';
 
-    protected $fillable = [
-        'name',
-        'status',
-        'image',
-        'category_id',
-    ];
-    public function item()
+    public function items()
     {
-        return $this->belongsToMany(Item::class,'categories_items','category_id','item_id');
+        return $this->hasMany(Item::class);
     }
 }
+
+

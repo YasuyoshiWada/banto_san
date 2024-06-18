@@ -11,22 +11,20 @@
                     <div class="mt-3 align-items-center">
                         <div class="card card-modal">
                             <div class="card-body">
-                                <img src="{{$item->image}}"
-                                alt="Item Image"
-                                class="card-img-top mb-1 rounded" style="height: 150px; object-fit: cover;" >   
+    
                             </div>
                             <div class="card-footer">
                                 <div class="card-text">
                                     <p class="h2 text-center">ITEM NAME</p>
-                                    <p class="h4 text-center">{{$item->name}}</p>
-                                    <p class="h5 px-1">PRICE : {{$item->price}} $</p>
+                                    <p class="h4 text-center">Chicken</p>
+                                    <p class="h5 px-1">PRICE :</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form action="{{route('item.destroy' , $item->id)}}" method="post" class="modal-form">
+                    <form action="#" method="post" class="modal-form">
                         @csrf
                         @method('DELETE')
     

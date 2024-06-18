@@ -8,28 +8,29 @@
 
 <style>
     .custom-bg-color {
-    background-color: #99ccff;
-    }
+  background-color: #99ccff;
+}
 
-    .btn-color-change {
-    background-color: #003366;
-    }
+.btn-color-change {
+  background-color: #003366;
+}
 
-    .right-section {
-    height: 80vh;
-    background-image: url("/images/login-image1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
+.right-section {
+  height: 80vh;
+  background-image: url("/images/login-image1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    .text-account {
-    font-size: 1.1vw;
-    }
+.text-account {
+  font-size: 1.1vw;
+}
 
-    .text-sign-up {
-    font-size: 1.1vw;
-    font-weight: bold;
-    }
+.text-sign-up {
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+
 
 </style>
 <div class="container-fluid custom-bg-color"  style="height: 100vh;">

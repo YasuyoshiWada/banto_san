@@ -216,5 +216,3 @@ http://127.0.0.1:8000/
 ##### PASSWORD:     
 ##### DATABASE: 12_banto_stock
 ##### PORT: 3306
-# banto_san
-# banto_san
